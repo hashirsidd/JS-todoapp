@@ -2,10 +2,15 @@
 
 function addHtml(todo){
   
-  var html = "<li><i class='fa fa-angle-right pr-4'></i><div>"+todo+"</div> <div><a onclick='del(this)'><i class='fa fa-trash delete'></i></a></li></div"
+  var html = "<li class='mb-3'><i class='fa fa-angle-right pr-4'></i><div class='text'>"+todo+"</div> <a onclick='del(this)'><i class='fa fa-trash delete'></i></a></li>"
   document.getElementById('items').innerHTML += html;
 }
 
+function doit_onkeypress(event){
+  if (event.keyCode == 13 || event.which == 13){
+      addTodos();
+  }
+}
 function addTodos() {
   item="";
   
@@ -20,8 +25,8 @@ function addTodos() {
 }
 
 function del(a){
-  console.log(a.parentElement.innerHTML);
-  a.parentElement.parentElement.parentElement.removeChild(a.parentElement.parentElement);
+  console.log(a.parentElement.parentElement.innerHTML);
+  a.parentElement.parentElement.removeChild(a.parentElement);
   
 }
 

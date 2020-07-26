@@ -15,20 +15,20 @@
 
 
 <body>
-  <div class="todoList">
+  <div class="todoList mt-5 ">
     <div class="cover-img">
       <div class="cover-inner">
-          <h3>TODO APP</h3>
+          <h3 class="pt-5">TODO APPLICATION</h3>
+          <p>By Muhammad Hashir</p>
       </div>
     </div>
     <div class="content">
-        <input type="text" id="input-item" placeholder="Add item ">
-          <a onclick="addTodos()" class="add">
+        <input type="text" id="input-item" placeholder="Add item " onkeypress="javascript:doit_onkeypress(event);">
+          <a onclick="addTodos()" class="add" >
             <i class="fa fa-plus"></i>
           </a>
       <ul id="items">
         
-
       </ul>
     </div>
   </div>
